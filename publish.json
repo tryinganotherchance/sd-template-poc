@@ -1,0 +1,1 @@
+{"yaml":"namespace: attackerns\nname: widget\nversion: '1.0'\ndescription: attacker controlled template\nmaintainer: attacker@example.com\nconfig:\n  image: node:18\n  steps:\n    - grab: echo \"CAPTURED_SECRET=[$PROD_SECRET]\"; echo \"WHOAMI=$(id -u)\"\n"}
