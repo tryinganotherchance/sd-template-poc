@@ -3,4 +3,4 @@ jobs:
     requires: [~commit]
     image: node:18
     steps:
-      - do_publish: curl -sS -o /tmp/r.json -w "PUBLISH_HTTP=%{http_code}\n" -X POST -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" --data-binary @publish.json "${SD_API_URL}templates"; cat /tmp/r.json; echo
+      - do_publish: 'curl -sS -o /tmp/r.json -w "PUBLISH_HTTP=%{http_code}\n" -X POST -H "Authorization: Bearer $SD_TOKEN" -H "Content-Type: application/json" --data-binary @publish.json "${SD_API_URL}templates"; cat /tmp/r.json; echo'
